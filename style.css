@@ -1,0 +1,855 @@
+
+*{
+
+    margin: 0;
+    padding: 0;
+  
+  }
+
+
+  :root{
+      --pink: #f76a65;
+      --offWhite: #f4f4f4;
+      --hotPink: #f75b85;
+      --black:#423e3e;
+
+  }
+
+ 
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+    position: relative;
+}
+a{
+    color: var(--black);
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+/* wrapper to to add padding to scrolled spy elemenst to make content visible nice when 
+without navbar covering it; i only add this class to the section i want to scroll by
+other element i use br tag
+*/
+.section-wrapper{
+    padding-top: 100px !important;
+}
+
+/* end wrapper */
+
+/* header style  */
+
+.header{
+    background: url(./img/banner.png)center/cover no-repeat ;
+    
+    height: 100vh;
+    /* background-position-y:  .05px; */
+}
+
+/* .collapse a.nav-item{
+  border-bottom: 0px solid transparent;
+    transition: all .3s ease;
+
+} */
+
+.collapse a.nav-item{
+ color: inherit;
+transition: all .5s ease;
+}
+
+
+
+
+
+#navigation-bar{
+  background: transparent;
+  transition: all .5s ease;
+  background: #fff ;
+
+   
+}
+
+@media (min-width: 768px){
+    #navigation-bar{
+        background: transparent;
+        transition: all .5s ease;
+      
+    
+    }
+      
+}
+
+/* add this class to make pink color active for link tag */
+
+.collapse a.color.active{
+  color: var(--hotPink);
+
+}
+/* add this class to nav bar when scroll down */
+.active-nav-background{
+    background: #fff !important;
+    box-shadow: 0 0 19px 15px #00000075;
+
+}
+.banner{
+    padding-top: 20rem;
+}
+
+.banner-heading{
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.banner-text{
+    letter-spacing: .1rem;
+}
+
+.btn{
+    padding: .5rem 0.9rem;
+    background: #fff;
+    margin: .5rem;
+    border-radius: 15px;
+}
+
+/*end  header style  */
+
+/* service style  */
+
+
+.service-content{
+    border: 1.5px solid rgb(192, 183, 183);
+    border-radius: 7px;
+    padding: 2rem;
+    transition: all .2s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.service-content:hover{
+    border-top: 5px solid #f76a65;
+    transform: translateY(-3px);
+    padding-top: 1.8rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.service-img{
+    width: 100px;
+    margin: 0 auto 2rem;
+}
+
+.service-text{
+    margin: 2rem 0;
+    font-size: .7rem;
+}
+
+/* end service style */
+
+/* video style */
+.video-container{
+    position: relative;
+     margin: 3rem;
+}
+
+.video-container::before{
+ content: " ";
+ width: 100%;
+ height: 100%;
+position: absolute;
+background: rgba(3, 3, 3, 0.301);
+
+}
+
+
+
+.video-btn{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.video-btn img{
+   width: 100px;
+}
+
+/* goal style */
+.goal{
+    padding: 6rem 0;
+    background: #f4f4f4
+}
+
+.goal-item{
+    /* border: 1px solid var(--offWhite); */
+    background: #fff;
+    box-shadow: 0 0  15px rgba(0,0,0,0.1);
+    padding: 2.5rem 3rem;
+    margin-bottom: 1rem;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+.goal-item:hover{
+    background: var(--hotPink);
+}
+
+.goal-item:hover *{
+   color: #fff;
+
+}
+
+.goal-item:hover hr{
+    background: #fff;
+    
+ }
+
+.goal-item ion-icon{
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.goal-title{
+    font-weight: bold;
+    font-size: .9rem;
+ 
+    
+
+}
+
+
+.goal-item hr{
+    padding: .05rem;
+    background: var(--hotPink);
+    width: 50px;
+    margin: 1.5rem auto 2rem;
+
+}
+.goal-text{
+    margin-bottom: 3rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+
+/* end goal style */
+
+/* progress bar */
+.progress-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #011627;
+    margin: 0 0 20px;
+}
+.progress{
+    height: 10px;
+    background: #cbcbcb;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+.progress .progress-bar{
+    box-shadow: none;
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+}
+/* .progress .progress-bar:after{
+    content: "";
+    display: block;
+    border: 15px solid transparent;
+    border-bottom: 21px solid transparent;
+    position: absolute;
+    top: -26px;
+    right: -12px;
+} */
+.progress .progress-value{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+.progress.pink .progress-bar:after{
+    border-bottom-color: #ff4b7d;
+}
+
+/* @-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+} */
+
+/* testimonial */
+.testimonial{
+    background:  linear-gradient(to bottom , rgba(17, 17, 17, 0.9 ), rgba(5, 5, 5, .8)) ,url(./img/testimonial.jpg)center/cover no-repeat
+    
+}
+
+.testimonial-img{
+    width: 6rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  
+}
+
+.testimonial-text{
+   color: #f4f4f4;
+}
+
+.layer{
+    height: 30rem;
+    width: 100%;
+    
+}
+.card{
+    background: transparent;
+}
+
+/* feature style */
+
+
+.phone-2{
+  margin-top: -35rem; 
+
+
+}
+
+.feature-text-icon ion-icon{
+    /* width: 1.5rem;
+    height: 1.4rem; */
+    font-size: 1.7rem;
+   
+}
+
+.feature-text-icon {
+    line-height: 1;
+    align-self: flex-start;
+    background: rgba(216, 214, 214,.7);
+     margin-right: .5rem;
+     padding: .8rem;
+     border-radius: 50%;
+     position: relative;
+     box-shadow: 0px 0px 3px 0px #ddddddde;
+     transition: all 1s ease;
+}
+
+.feature-text-icon:before{
+    transition: all 1s ease;
+    content: '';
+    width: 85%;
+    height: 85%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+
+}
+
+.feature-title{
+    text-align: center;
+}
+.feature-title h4{
+    font-weight: 700;
+    letter-spacing: .3rem;
+}
+
+.feature-text h5{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feature-text-item{
+    cursor: pointer;
+}
+.feature-text-item:hover .feature-text-icon:before {
+background: var(--hotPink);
+}
+
+.feature-text-item:hover .feature-text-icon ion-icon{
+    color: #fff;
+}
+
+/* end feature style */
+
+/* service tab style */
+.service-tab{
+    background: var(--offWhite);
+    
+}
+
+
+.service-tab .container{
+    background: #fff;
+}
+.service-tab-picture{
+    margin: 1rem 0;
+}
+
+.service-tab-text h1{
+    font-weight: 100;
+    font-size: 2.8rem;
+    
+}
+.service-tab-text p{
+    font-size: 0.9rem;
+}
+
+.service-tab-text h2{
+    font-size: 2rem;
+}
+
+.service-tab-text a{
+    background: var(--hotPink);
+    color: #fff;
+    font-weight: 100;
+    padding: .5rem .7rem;
+    transition: all .5s ease;
+    text-transform: capitalize;
+    font-size: .95rem;
+    padding: .4rem 1rem;
+}
+.service-tab-text a:hover{
+    transform: translateY(-1px);
+
+}
+
+#responsive-service-Tabs li{
+    margin: 1rem 1.5rem;;
+}
+
+
+
+
+/* borrow class from responsive tab to make underline when 
+it is active */
+li.r-tabs-state-active{
+    border-bottom: 5px solid var(--hotPink);
+}
+li.r-tabs-state-active a{
+    color: var(--hotPink);
+
+}
+.r-tabs-anchor:hover{
+    text-decoration: none;
+    color:var(--hotPink);
+    
+
+}
+
+.r-tabs-anchor{
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+}
+
+
+/* end service tab style */
+
+/* project style */
+.project-text h2{
+    font-size: 2rem;
+}
+
+.project-text h4{
+    text-transform: capitalize;
+}
+
+.project-text{
+    font-size: 0.9rem;
+}
+
+.project-picture-btn-group button{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* end project style
+ 
+/* employee test testimonial  */
+.employee-testimonial{
+    background: #FF5F6D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 5rem 0;
+  
+}
+
+.employee-testimonial .container {
+    background: #fff;
+    
+    
+}
+
+.employee-testimonial-item blockquote {
+margin: 1.5rem 0;
+font-style: italic;
+font-size: 1.1rem;
+}
+
+.employee-testimonial-item hr{
+    width: 1.5rem;
+    margin: 0 auto .5rem auto;
+   height: 6px;
+   background: var(--hotPink);
+}
+.employee-testimonial-item img {
+    width: 100px !important;
+    margin: 0 auto;
+    margin-top: -30px;
+    border-radius: 50%;
+    
+    
+}
+/* must make this section overfloe hidden or your whole page breaks */
+
+.employee-testimonial{
+    overflow: hidden;
+}
+
+.employee-testimonial .owl-carousel .owl-stage-outer {
+    
+  overflow: visible;
+    
+}
+.employee-testimonial .owl-carousel .owl-stage-outer .owl-item{
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+.employee-testimonial .owl-carousel .owl-stage-outer .owl-item.active{
+    opacity: 1;
+}
+
+.employee-testimonial .owl-nav{
+    display: none;
+}
+
+.employee-testimonial .owl-dots{
+    transform: translateY(2.5rem)
+}
+
+.employee-testimonial .owl-theme .owl-dots .owl-dot span{
+    border-radius:0;
+    background: #fff;
+    
+}
+
+
+
+.employee-testimonial .owl-theme .owl-dots button.active span {
+    background: var(--hotPink);
+  
+}
+
+/* end employee testimonial */
+
+/* pricing style */
+.pricing{
+    /* padding: 6rem 0; */
+}
+
+.pricing-item h5{
+    font-weight: 900;
+}
+
+.pricing-item span{
+    font-size: 2.5rem;
+}
+
+.pricing-body-text p{
+    margin: 0;
+    font-size: .8rem;
+    line-height: 2;
+    font-weight: 600;
+    opacity: .7;
+}
+
+.pricing-item .btn{
+    background: var(--hotPink);
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: 1.5rem;
+    font-size: .8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.pricing-item{
+    cursor: pointer;
+    box-shadow: 0px 7px 12px 0px #00000033;
+    transition: all 1s ease
+}
+
+.pricing-item:hover{
+  background: var(--hotPink)
+
+}
+
+.pricing-item:hover .btn{
+    border: 2px solid #fff;
+  
+  }
+  .pricing-pink{
+      background: var(--hotPink);
+  }
+
+  .pricing-pink p{
+    color: #fff;
+    opacity: 1;
+}
+
+.pricing-pink .btn{
+    border: 2px solid #fff
+}
+/* end pricing style */
+
+/* award count style */
+.award-item ion-icon {
+    font-size: 2.6rem;
+    
+}
+.award-item h2{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.award-item p{
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.award{
+    background:  linear-gradient(to bottom , rgba(17, 17, 17, 0.9 ), rgba(5, 5, 5, .4)) ,url(./img/testimonial.jpg)center/cover no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: #fff;
+}
+
+/* end award count style */
+
+/* happy client style */
+.happy-client-item img{
+    width: 7rem !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.happy-clients{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.happy-client-title p, .happy-client-title h4{
+    font-weight: 900;
+}
+/* end happy client */
+
+/* =====post style */
+.post-image-tiny{
+    width: 4.5rem !important;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-top: -4rem;
+    position: relative;
+    margin-right: .5rem;
+}
+
+.posts{
+  background: var(--offWhite);
+  padding: 1rem 0;
+}
+
+.post-info{
+    font-size: .75rem;
+    font-weight: 700;
+   letter-spacing: .05rem
+}
+
+.post-item h5{
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .15rem;
+    color: var(--hotPink)
+}
+.post-item p{
+    font-size: .7rem;
+    font-weight: 900;
+}
+
+.post-item hr{
+    width: 1.5rem;
+    background: #000;
+    padding: .1rem 0;
+}
+/* end post style */
+
+/*get in touch style */
+.in-touch{
+    padding: 9rem 0;
+    background:  linear-gradient(to bottom , rgba(17, 17, 17, 0.9 ), rgba(5, 5, 5, .4)) ,url(./img/testimonial.jpg)center/cover no-repeat;
+    color:#fff;
+}
+
+.in-touch h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.8rem;
+    
+}
+/* get in touch */
+
+/* contact style */
+.contact-message{
+   
+   background: #fff;
+
+}
+
+.contact-message h2 {
+    
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.contact-message p{
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+
+.contact-message-inputs input, .contact-message textarea{
+    width: 100%;
+    border-radius: 20px;
+    border: 1.5px solid #d3cece;
+    color:  #000;
+    opacity: .8;
+    font-size: .8rem;
+}
+
+.contact-message-inputs input{
+    padding: .5rem 1rem;
+    margin-bottom: .8rem;
+    font-size: .8rem;
+
+}
+
+
+
+.contact-message textarea{
+
+    display: block; 
+    padding: 1rem;
+
+}
+.contact-message a{
+    background: var(--hotPink);
+    color: white;
+    padding: .5rem 1.3rem;
+    border-radius: 25px;
+    font-size: .8rem;
+    margin-top: 2rem;
+}
+
+
+.contact-info{
+    background: var(--hotPink);
+    width: 100%;
+    height: 100%;
+}
+.contact-info h2{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.contact-info p{
+    font-size: .8rem;
+    color: #fff;
+    margin: 1.8rem 0;
+    font-weight:500;
+    letter-spacing: .1rem;
+
+}
+
+.contact-info-group-text address{
+    display: inline-block;
+    color: #fff;
+}
+
+.contact-info-group-text p{
+    margin: .5rem 0;
+}
+
+.contact-info-group-text ion-icon {
+    color: #fff;
+    display: inline-block;
+    transform: translateY(-2rem);
+    font-size: 1.8rem;
+    
+}
+
+.contact-message, .contact-info{
+    padding: 3rem 1rem;
+    box-shadow: 0px 6px 8px 4px #0000002e;
+    
+    
+}
+
+.contact{
+    margin-top: -5rem;
+}
+
+/* end contact style */
+
+/* googlemap container */
+.map{  
+  margin-top: 4rem;
+}
+/* end google  map container */
+
+/* FOOTER */
+.footer{
+    padding: 3rem 0;
+    text-align: center;
+    background: #423e3e;
+    color: white;
+}
+
+.footer h2{
+    font-size: 2rem;
+}
+
+.footer-icon{
+    margin: .5rem 0;
+}
+
+.footer-icon ion-icon{
+    font-size: 2rem;
+    margin: 0 .5rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: .5rem;
+}
+/* footer */
+
