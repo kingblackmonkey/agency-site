@@ -25,8 +25,9 @@ body{
 }
 
 img{
-
-    width: 100%
+    display: block;
+    width: 100%;
+    height: 100% !important;
 }
 a{
     color: var(--black);
@@ -506,6 +507,10 @@ li.r-tabs-state-active a{
 /* end service tab style */
 
 /* project style */
+#project-grid div{
+    height: 180px;;
+}
+
 .project-text h2{
     font-size: 2rem;
 }
@@ -727,7 +732,8 @@ font-size: 1.1rem;
     font-size: .7rem;
     font-weight: 900;
     letter-spacing: .15rem;
-    color: var(--hotPink)
+    color: var(--hotPink);
+    text-align: center;
 }
 .post-item p{
     font-size: .7rem;
@@ -735,9 +741,13 @@ font-size: 1.1rem;
 }
 
 .post-item hr{
-    width: 1.5rem;
+   width: 50%;
     background: #000;
-    padding: .1rem 0;
+    margin: 1rem auto;
+}
+
+.post-item img{
+    height: 240px !important;
 }
 /* end post style */
 

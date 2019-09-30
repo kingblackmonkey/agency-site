@@ -71,7 +71,7 @@
 // responsive tabs
 $(function(){
   $('#responsive-service-Tabs').responsiveTabs({
-    animation: 'slide'
+    startCollapsed: 'tabs'
 
 });
 
@@ -265,7 +265,7 @@ $(function(){
 
 
   $(window).on('scroll', debounce(function(){
-    console.log(123)
+     console.log(123)
     if($(window).scrollTop() > 70){
       // add active class back ground to nav
       $('#navigation-bar').addClass("active-nav-background");
