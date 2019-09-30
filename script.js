@@ -71,7 +71,7 @@
 // responsive tabs
 $(function(){
   $('#responsive-service-Tabs').responsiveTabs({
-    startCollapsed: 'tabs'
+    animation: 'slide'
 
 });
 
